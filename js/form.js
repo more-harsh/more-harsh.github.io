@@ -71,7 +71,7 @@ if(submitBtn)
 
 function sendEmail(inputname, inputemail, inputmessage) {
     Email.send({
-      Host: "smtp.gmail.com",
+      Host: "smtp.elasticemail.com",
       Username: "2001harshm@gmail.com",
       Password: "mcyybijnhrbagapm",
       To: '2001harshm@gmail.com',
@@ -83,3 +83,16 @@ function sendEmail(inputname, inputemail, inputmessage) {
         alert("Your message sent successfully! \nThank You!")
     });
 }
+
+/*
+Email.send({
+    SecureToken : "C973D7AD-F097-4B95-91F4-40ABC5567812",
+    To: '2001harshm@gmail.com',
+    From: "2001harshm@gmail.com",
+    Subject: `${inputname} sent you a message from website`,
+    Body: `Name: ${inputname} <br/> Email: ${inputemail} <br/><br/> Message: ${inputmessage}`,
+    })
+    .then((message) => {
+        alert("Your message sent successfully! \nThank You!")
+    });
+*/
