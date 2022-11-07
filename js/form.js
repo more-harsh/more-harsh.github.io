@@ -80,6 +80,6 @@ function sendEmail(inputname, inputemail, inputmessage) {
       Body: `Name: ${inputname} <br/> Email: ${inputemail} <br/><br/> Message: ${inputmessage}`,
     })
     .then((message) => {
-        alert("Your message sent successfully! \nThank You!")
+        alert("Something went wrong! \nThank You!")
     });
 }
