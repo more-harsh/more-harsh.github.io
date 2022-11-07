@@ -71,7 +71,7 @@ if(submitBtn)
 
 function sendEmail(inputname, inputemail, inputmessage) {
     Email.send({
-      Host: "smtp.elasticemail.com",
+      Host: "smtp.gmail.com",
       Username: "2001harshm@gmail.com",
       Password: "mcyybijnhrbagapm",
       To: '2001harshm@gmail.com',
