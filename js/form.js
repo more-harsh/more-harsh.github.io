@@ -48,7 +48,8 @@ if(submitBtn)
             }
 
             console.log('submit cliked' + inputname.value + " " + inputemail.value + " " + inputmessage.value);
-            sendEmail(inputname.value, inputemail.value, inputmessage.value);
+            alert("Something went wrong! \n");
+            // sendEmail(inputname.value, inputemail.value, inputmessage.value);
         }
         else
         {
