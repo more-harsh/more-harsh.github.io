@@ -19,15 +19,27 @@
 
     <title>Harsh More</title>
 
+    <!--==================== EmailJS ====================-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "Wqz3DA5EcUAVbl8qS",
+            });
+        })();
+    </script>
+
+
     <!-- Google Analytics Added -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-957KJ2FQEX"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'G-957KJ2FQEX');
+        gtag('config', 'G-957KJ2FQEX');
     </script>
 </head>
 
@@ -126,7 +138,8 @@
 
                     <div class="home__data">
                         <h1 class="home__title">Hi, I'm Harsh More</h1>
-                        <h3 class="home__subtitle">Student | Software Developer | AR VR Developer |<br> Web Developer | AI ML Enthusiast</h3>
+                        <h3 class="home__subtitle">Student | Software Developer | AR VR Developer |<br> Web Developer |
+                            AI ML Enthusiast</h3>
                         <p class="home__description">High experience in web design and development, producing
                             quality work.</p>
                         <a href="#contact" class="button button--flex">
@@ -155,12 +168,12 @@
 
                 <div class="about__data">
                     <p class="about__description">
-                        I am currently pursuing my Master's in Computer Science from North Carolina 
-                        State University (NCSU) and pursued my B. Tech in Information Technology from 
-                        Vishwakarma Institute of Technology, Pune, graduating with a 9.73 CGPA, placing 
-                        me in the top 1 percentile. I have a profound interest in computer programming 
-                        and am always curious about learning new technologies. I am excited to connect 
-                        with new people and solve real-life challenges with collective effort. Being an 
+                        I am currently pursuing my Master's in Computer Science from North Carolina
+                        State University (NCSU) and pursued my B. Tech in Information Technology from
+                        Vishwakarma Institute of Technology, Pune, graduating with a 9.73 CGPA, placing
+                        me in the top 1 percentile. I have a profound interest in computer programming
+                        and am always curious about learning new technologies. I am excited to connect
+                        with new people and solve real-life challenges with collective effort. Being an
                         open-minded person, I am always open to challenges and constructive feedback.
                     </p>
                     <p class="about__description">
@@ -639,7 +652,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!--==================== QUALIFICATION 3 ====================-->
                         <div class="qualification__data">
                             <div>
@@ -651,7 +664,7 @@
                                     2021 - 2023
                                 </div>
                             </div>
-                            
+
                             <div>
                                 <span class="qualification__rounder"></span>
                                 <span class="qualification__line"></span>
@@ -753,7 +766,7 @@
                                 <span class="qualification__rounder"></span>
                                 <span class="qualification__line"></span>
                             </div>
-                            
+
                             <div>
                                 <h3 class="qualification__title">TomTom</h3>
                                 <span class="qualification__subtitle">SWE Intern</span>
@@ -770,7 +783,7 @@
                         </div>
                         <!--==================== QUALIFICATION 2 ====================-->
                         <div class="qualification__data">
-                        <!--<div></div>
+                            <!--<div></div>
 
                             <div>
                                 <span class="qualification__rounder"></span>
@@ -801,7 +814,7 @@
                                 <span class="qualification__rounder"></span>
                                 <span class="qualification__line"></span>
                             </div>
-                            
+
                             <div>
                                 <h3 class="qualification__title">IEEE Student Branch VIT, Pune</h3>
                                 <span class="qualification__subtitle">Coding Club Head</span>
@@ -871,7 +884,7 @@
 
                             <div>
                                 <span class="qualification__rounder"></span> -->
-                                <!-- <span class="qualification__line"></span> -->
+                            <!-- <span class="qualification__line"></span> -->
                             <!--</div>-->
 
                             <div>
@@ -908,8 +921,9 @@
 
                         <div class="portfolio__data">
                             <h3 class="portfolio__title">AI Agent Navigation using Online DFS</h3>
-                            <p class="portfolio__description">An AI agent in Unity that navigates a maze-like, unknown environment 
-                                using modified Depth-First Search (DFS) algorithm, 
+                            <p class="portfolio__description">An AI agent in Unity that navigates a maze-like, unknown
+                                environment
+                                using modified Depth-First Search (DFS) algorithm,
                                 adapted to follow an online search strategy.</p>
                             <a href="https://github.com/moreharsh/AI_Agent_Navigation_using_Online_DFS"
                                 class="button button--flex button--small portfolio__button">
@@ -918,15 +932,16 @@
                             </a>
                         </div>
                     </div>
-                    
+
                     <!--==================== PORTFOLIO 2 ====================-->
                     <div class="portfolio__content grid swiper-slide">
                         <img src="img/portfolio0.png" alt="" class="portfolio__img">
 
                         <div class="portfolio__data">
                             <h3 class="portfolio__title">VR FPS Game</h3>
-                            <p class="portfolio__description">A first-person shooting Virtual Reality game (Oculus Quest 2), 
-                                highlighting the potential of VR in making 
+                            <p class="portfolio__description">A first-person shooting Virtual Reality game (Oculus Quest
+                                2),
+                                highlighting the potential of VR in making
                                 games more interactive and impressive.</p>
                             <a href="https://github.com/moreharsh/Xperiments-6.0_VR-First_Person_Shooting"
                                 class="button button--flex button--small portfolio__button">

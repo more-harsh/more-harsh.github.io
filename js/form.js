@@ -48,8 +48,7 @@ if(submitBtn)
             }
 
             console.log('submit cliked' + inputname.value + " " + inputemail.value + " " + inputmessage.value);
-            alert("Something went wrong! \n");
-            // sendEmail(inputname.value, inputemail.value, inputmessage.value);
+            sendEmail(inputname.value, inputemail.value, inputmessage.value);
         }
         else
         {
@@ -71,29 +70,20 @@ if(submitBtn)
 // Function to send email
 
 function sendEmail(inputname, inputemail, inputmessage) {
-    Email.send({
-      Host: "smtp.gmail.com",
-      Username: "2001harshm@gmail.com",
-      Password: "mcyybijnhrbagapm",
-      To: '2001harshm@gmail.com',
-      From: "2001harshm@gmail.com",
-      Subject: `${inputname} sent you a message from website`,
-      Body: `Name: ${inputname} <br/> Email: ${inputemail} <br/><br/> Message: ${inputmessage}`,
-    })
-    .then((message) => {
-        alert("Something went wrong! \nThank You!")
-    });
-}
+    var params = {
+        name: inputname,
+        email: inputemail,
+        message: inputmessage,
+    };
 
-/*
-Email.send({
-    SecureToken : "C973D7AD-F097-4B95-91F4-40ABC5567812",
-    To: '2001harshm@gmail.com',
-    From: "2001harshm@gmail.com",
-    Subject: `${inputname} sent you a message from website`,
-    Body: `Name: ${inputname} <br/> Email: ${inputemail} <br/><br/> Message: ${inputmessage}`,
-    })
+    const serviceID = 'service_5er5ov6';
+    const templateID = 'template_e7i4hak';
+
+    emailjs.send(serviceID, templateID, params)
     .then((message) => {
-        alert("Your message sent successfully! \nThank You!")
-    });
-*/
+        alert("Thank you! Your message has been sent.")
+    })
+    .catch((err) => 
+        alert("Something went wrong! \nThank You!")
+    );
+}
