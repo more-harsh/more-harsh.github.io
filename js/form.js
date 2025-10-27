@@ -2,6 +2,23 @@
 
 const submitBtn = document.getElementById('submitBtn');
 
+function getGeoInfo() {
+  try {
+    const res = fetch("https://ipapi.co/json/");
+    const data = res.json();
+    return {
+      ip: data.ip,
+      country: data.country_name,
+      city: data.city,
+      timezone: data.timezone
+    };
+  } catch (e) {
+    console.error("Geo lookup failed:", e);
+    return {};
+  }
+}
+
+
 // Form validation
 
 if(submitBtn)
@@ -12,6 +29,8 @@ if(submitBtn)
         let inputname = document.getElementById('inputname');
         let inputemail = document.getElementById('inputemail');
         let inputmessage = document.getElementById('inputmessage');
+        const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        const geo = getGeoInfo();
 
         if(!inputname.value)
         {
@@ -47,7 +66,8 @@ if(submitBtn)
                 return false;
             }
 
-            console.log('submit cliked' + inputname.value + " " + inputemail.value + " " + inputmessage.value);
+            // console.log('submit cliked' + inputname.value + " " + inputemail.value + " " + inputmessage.value);
+            inputmessage += "\n\nTimezone: " + timezone + "\n\nIP:" + geo;
             sendEmail(inputname.value, inputemail.value, inputmessage.value);
         }
         else
