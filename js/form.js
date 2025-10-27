@@ -4,8 +4,10 @@ const submitBtn = document.getElementById('submitBtn');
 
 function getGeoInfo() {
   try {
-    const res = fetch("https://ipapi.co/json/");
-    const data = res.json();
+    const res = fetch("https://api.allorigins.win/get?url=" + encodeURIComponent("https://ipapi.co/json/"));
+    const wrapper = res.json();
+    const data = JSON.parse(wrapper.contents);
+
     return {
       ip: data.ip,
       country: data.country_name,
@@ -66,8 +68,8 @@ if(submitBtn)
                 return false;
             }
 
-            // console.log('submit cliked' + inputname.value + " " + inputemail.value + " " + inputmessage.value);
             inputmessage += "\n\nTimezone: " + timezone + "\n\nIP:" + geo;
+            console.log('Updated submit cliked' + inputname.value + " " + inputemail.value + " " + inputmessage.value);
             sendEmail(inputname.value, inputemail.value, inputmessage.value);
         }
         else
